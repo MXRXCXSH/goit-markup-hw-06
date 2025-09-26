@@ -34,13 +34,27 @@ address {
   font-style: normal;
 }
 .container {
-  width: 1158px;
+  max-width: 320px;
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* -----------HEADER----------- */
 
 .header {
@@ -157,30 +171,29 @@ address {
 
 .main-section {
   background-color: #2e2f42;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/img1011.jpg);
+    url(../images/img1011.1.1.jpg);
   max-width: 1440px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
 }
 
 .main-header {
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 40px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
-  max-width: 496px;
+  width: 216px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 
 .button {
@@ -211,33 +224,17 @@ address {
 /* ----------- SECTION TWO (FEATURES)----------- */
 
 .features-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .features-advantages-list {
-  max-width: 1128px;
-  max-height: 224px;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 .features-item {
-  width: calc((100% - 3 * 24px) / 4);
+  width: 100%;
 }
 
 .features-item-icon {
@@ -251,16 +248,18 @@ address {
   border-radius: 4px;
 }
 
-.features-advantages {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+.features-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .features-description {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -271,13 +270,13 @@ address {
 
 .team-section {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .team-header {
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 40px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -287,19 +286,20 @@ address {
 }
 
 .team-list-container {
+  max-width: 264px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
-  gap: 24px;
-  max-width: 1128px;
+  gap: 72px;
 }
 
 .team-list {
-  flex-basis: calc((100% - 3 * 24px) / 4);
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
   box-shadow: 0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  width: 100%;
 }
 
 .team-info {
@@ -363,13 +363,13 @@ address {
 /* ----------- SECTION FOUR (PORTFOLIO)----------- */
 
 .portfolio-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .portfolio-header {
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 40px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -396,19 +396,23 @@ address {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 48px 24px;
+  gap: 48px;
   margin: 0 auto;
-  max-width: 1128px;
+  max-width: 288px;
 }
 
 .portfolio-list {
-  width: calc((100% - 2 * 24px) / 3);
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-container {
   position: relative;
   overflow: hidden;
+}
+
+.portfolio-list-container img {
+  max-height: 280px;
 }
 
 .portfolio-list-text {
@@ -423,6 +427,7 @@ address {
   color: #f4f4fd;
   background-color: #4d5ae5;
   height: 100%;
+  width: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -440,7 +445,11 @@ address {
 }
 
 .portfolio-info {
-  padding: 32px 16px;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 31px;
+  padding-right: 6px;
+  padding-left: 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
@@ -449,18 +458,18 @@ address {
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
   display: flex;
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .footer-logo-container {
-  width: 264px;
-  margin-right: 120px;
+  width: 288px;
 }
 
 .footer-logo {
@@ -472,10 +481,11 @@ address {
   text-transform: uppercase;
   color: #4d5ae5;
   display: flex;
-  margin-bottom: 16px;
   width: 115px;
   padding-top: 1.5px;
   padding-bottom: 1.5px;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 .footer-logo-span {
@@ -491,8 +501,7 @@ address {
 
 .footer-social-container {
   display: block;
-  margin-bottom: 32px;
-  margin-right: 80px;
+  margin: 0 auto;
 }
 
 .footer-social-icons-list {
@@ -520,6 +529,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin: 0 auto;
   margin-bottom: 16px;
 }
 
@@ -545,7 +555,6 @@ address {
 
 .footer-subscribe-container {
   display: block;
-  margin-bottom: 32px;
 }
 
 .footer-subscribe-title {
@@ -555,18 +564,18 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin: 0 auto;
   margin-bottom: 16px;
 }
 
 .footer-subscribe-form {
-  display: flex;
-  gap: 24px;
+  display: block;
 }
 
 .footer-subscribe-input {
   border: 1px solid #ffffff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
@@ -576,6 +585,7 @@ address {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 
 .footer-subscribe-input::placeholder {
@@ -600,6 +610,7 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  margin: 0 auto;
 }
 
 .footer-subscribe-button-icon {
@@ -854,4 +865,173 @@ address {
   line-height: 1.5;
   letter-spacing: 0.04em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------768PX------------- */
+@media screen and (min-width: 768px) {
+  /* GENERAL */
+  .container {
+    max-width: 768px;
+  }
+  /* MAIN */
+  .main-header {
+    font-size: 56px;
+    line-height: 1.08;
+    width: 496px;
+    margin-bottom: 36px;
+  }
+  .main-section {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/img1011.jpg);
+  }
+  /* FEATURES */
+  .features-advantages-list {
+    gap: 72px 24px;
+  }
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .features-header {
+    line-height: 1.11;
+    text-align: unset;
+  }
+  /* TEAM */
+  .team-list-container {
+    max-width: 552px;
+    gap: 64px 24px;
+  }
+  .team-list {
+    width: calc((100% - 24px) / 2);
+  }
+  /* PORTFOLIO */
+  .portfolio-container {
+    max-width: 736px;
+    gap: 72px 24px;
+  }
+  .portfolio-list {
+    width: calc((100% - 24px) / 2);
+  }
+  .portfolio-list-container img {
+    max-height: unset;
+  }
+  /* FOOTER */
+  .footer-container {
+    align-items: baseline;
+  }
+  .footer-logo-container {
+    max-width: 264px;
+    margin-right: 24px;
+  }
+  .footer-logo {
+    margin: unset;
+    margin-bottom: 16px;
+  }
+  .footer-social-container {
+    margin: unset;
+    margin-right: 80px;
+  }
+  .footer-social-text {
+    margin: unset;
+    margin-bottom: 16px;
+  }
+  .footer-subscribe-title {
+    margin: unset;
+    margin-bottom: 16px;
+  }
+  .footer-subscribe-form {
+    display: flex;
+    gap: 24px;
+  }
+  .footer-subscribe-input {
+    width: 264px;
+    margin-bottom: unset;
+  }
+  .footer-subscribe-button {
+    margin: unset;
+  }
+}
+
+/* ---------------1440PX------------- */
+@media screen and (min-width: 1158px) {
+  /* GENERAL */
+  .container {
+    max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  /* MAIN */
+  .main-section {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  /* FEATURES */
+  .features-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .features-advantages-list {
+    gap: 24px;
+  }
+  .features-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+  .features-header {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  /* TEAM */
+  .team-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .team-list-container {
+    max-width: 1128px;
+    gap: 24px;
+  }
+  .team-list {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
+  /* PORTFOLIO */
+  .portfolio-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .portfolio-container {
+    max-width: 1128px;
+    gap: 48px 24px;
+  }
+  .portfolio-list {
+    width: calc((100% - 2 * 24px) / 3);
+  }
+  /* FOOTER */
+  .footer {
+    padding: 100px 0;
+  }
+  .footer-logo-container {
+    margin-right: 120px;
+    margin-bottom: unset;
+  }
+}
+/* ----------NOT--------- */
+@media not screen and (min-width: 768px) {
+  /* FOOTER  */
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media not screen and (min-width: 1158px) {
+  /* FEATURES */
+  .features-item-icon {
+    display: none;
+  }
+  .footer-container {
+    gap: 72px;
+  }
 }
