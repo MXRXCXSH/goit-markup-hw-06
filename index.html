@@ -102,12 +102,15 @@
         <div class="mobile-menu-social">
           <ul class="mobile-menu-contacts-list">
             <li class="mobile-menu-contacts-item">
-              <a href="mailto:info@devstudio.com" class="cont-link"
+              <a
+                href="mailto:info@devstudio.com"
+                class="cont-link"
+                id="mobile-email"
                 >info@devstudio.com</a
               >
             </li>
             <li class="mobile-menu-contacts-item">
-              <a href="tel:+110001111111" class="cont-link"
+              <a href="tel:+110001111111" class="cont-link" id="mobile-phone"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -765,16 +768,19 @@
               name="user-privacy"
               id="user-privacy"
               value="true"
+              flex-shrink="0"
               required
             />
-            <span class="modal-check-label-icon">
-              <svg class="icon-check" width="10" height="8">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-            </span>
             <label for="user-privacy" class="modal-check-label">
-              I accept the terms and conditions of the&nbsp;
-              <a class="user-privacy-link" href=""> Privacy Policy</a>
+              <span class="modal-check-label-icon">
+                <svg class="icon-check" width="10" height="100%">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              <span class="modal-check-label-text">
+                I accept the terms and conditions of the
+                <a class="user-privacy-link" href="">Privacy Policy</a>
+              </span>
             </label>
           </div>
           <button type="submit" class="modal-submit-button">Send</button>
